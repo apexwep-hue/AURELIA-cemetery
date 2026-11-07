@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURELIA | Ultra-Luxury Real Estate & Private Estates</title>
+    <meta name="description" content="Discover curated luxury real estate, waterfront estates, and private penthouses worldwide. Exclusive off-market listings with Aurelia International Realty.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="AURELIA | Ultra-Luxury Real Estate">
+    <meta property="og:description" content="Explore luxury waterfront villas, penthouses, and private estates.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo" id="brand-logo">AURELIA<span>.</span></a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#properties" class="nav-link">Properties</a></li>
+                    <li><a href="#why-us" class="nav-link">Why Choose Us</a></li>
+                    <li><a href="#agents" class="nav-link">Advisors</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.2rem;">Inquire</a>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content" data-reveal>
+                <span class="hero-badge" id="hero-badge">Exclusive Listings</span>
+                <h1 class="hero-title" id="hero-title">Exceptional Properties for Extraordinary Lives</h1>
+                <p class="hero-subtitle" id="hero-subtitle">Discover luxury estates, waterfront villas, and architectural trophy properties.</p>
+            </div>
+        </section>
+
+        <!-- Search & Filter Section -->
+        <div class="container">
+            <div class="search-filter-card" id="search-filter" data-reveal>
+                <form id="property-search-form" class="filter-grid">
+                    <div class="filter-group">
+                        <label for="filter-location">Location</label>
+                        <select id="filter-location" class="filter-control">
+                            <option value="all">All Locations</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-type">Property Type</label>
+                        <select id="filter-type" class="filter-control">
+                            <option value="all">All Types</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-bedrooms">Bedrooms</label>
+                        <select id="filter-bedrooms" class="filter-control">
+                            <option value="all">Any Beds</option>
+                            <option value="4">4+ Bedrooms</option>
+                            <option value="5">5+ Bedrooms</option>
+                            <option value="6">6+ Bedrooms</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-price">Max Price</label>
+                        <select id="filter-price" class="filter-control">
+                            <option value="all">Any Price</option>
+                            <option value="20000000">Up to $20M</option>
+                            <option value="30000000">Up to $30M</option>
+                            <option value="50000000">Up to $50M</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Search Residences</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Properties Gallery Section -->
+        <section class="section" id="properties">
+            <div class="container">
+                <div class="section-title-wrapper" data-reveal>
+                    <span class="section-subtitle">Curated Portfolio</span>
+                    <h2 class="section-title">Featured Private Residences</h2>
+                    <p class="section-description">Handpicked architectural icons and prime residential developments worldwide.</p>
+                </div>
+
+                <!-- Filter Category Pills -->
+                <div class="category-pills" id="category-pills" data-reveal></div>
+
+                <!-- Dynamic Property Cards Grid -->
+                <div class="properties-grid" id="properties-grid"></div>
+            </div>
+        </section>
+
+        <!-- Statistics Banner -->
+        <section class="section stats-section">
+            <div class="container">
+                <div class="stats-grid" id="stats-grid"></div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="section" id="why-us">
+            <div class="container">
+                <div class="section-title-wrapper" data-reveal>
+                    <span class="section-subtitle">The Aurelia Advantage</span>
+                    <h2 class="section-title">Unrivaled Expertise & Discretion</h2>
+                </div>
+                <div class="why-grid" id="why-grid"></div>
+            </div>
+        </section>
+
+        <!-- Advisors / Agents Section -->
+        <section class="section" id="agents" style="background-color: var(--surface);">
+            <div class="container">
+                <div class="section-title-wrapper" data-reveal>
+                    <span class="section-subtitle">Private Client Advisors</span>
+                    <h2 class="section-title">Meet Our Senior Partners</h2>
+                </div>
+                <div class="agents-grid" id="agents-grid"></div>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title-wrapper" data-reveal>
+                    <span class="section-subtitle">Client Advisory</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-accordion" id="faq-accordion"></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact" style="background-color: var(--surface);">
+            <div class="container">
+                <div class="section-title-wrapper" data-reveal>
+                    <span class="section-subtitle">Private Consultation</span>
+                    <h2 class="section-title">Inquire With Our Advisory Team</h2>
+                </div>
+
+                <div style="max-width: 700px; margin: 0 auto;">
+                    <form id="contact-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <input type="text" id="contact-name" class="filter-control" placeholder="Full Name" required>
+                            <input type="email" id="contact-email" class="filter-control" placeholder="Email Address" required>
+                        </div>
+                        <input type="tel" id="contact-phone" class="filter-control" placeholder="Phone Number">
+                        <textarea id="contact-message" class="filter-control" rows="5" placeholder="Tell us about your property requirements..." required></textarea>
+                        <button type="submit" class="btn btn-primary">Submit Private Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" id="footer-logo">AURELIA<span>.</span></a>
+                    <p style="margin-bottom: 1rem;" id="footer-tagline">Luxury Real Estate Advisory & Off-Market Private Estates.</p>
+                    <p id="footer-address" style="font-size: 0.875rem;"></p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#properties">Residences</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#agents">Advisors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact Concierge</h4>
+                    <ul class="footer-links" id="footer-contact-info"></ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <ul class="footer-links" id="footer-socials"></ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="footer-copyright">&copy; 2026 Aurelia Realty LLC. All Rights Reserved.</p>
+                <p>Designed for Luxury Performance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Property Details Modal -->
+    <div class="modal-backdrop" id="property-modal" role="dialog" aria-modal="true">
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Floating Buttons -->
+    <a href="#" class="whatsapp-float pulse-effect" id="whatsapp-link" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-0.999 3.648 3.742-0.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        &#8593;
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
